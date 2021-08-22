@@ -18,7 +18,9 @@ export const Container = styled(GestureHandlerRootView)`
 export const Header = styled.View`
   width: 100%;
   height: ${RFValue(113)}px;
+
   background-color: ${({ theme }) => theme.colors.primary};
+
   align-items: center;
   justify-content: flex-end;
   padding-bottom: 19px;
@@ -33,8 +35,10 @@ export const Title = styled.Text`
 export const Category = styled.TouchableOpacity<CategoryProps>`
   width: 100%;
   padding: ${RFValue(15)}px;
+
   flex-direction: row;
   align-items: center;
+
   background-color: ${({ isActive }) =>
     isActive ? theme.colors.secondary_light : theme.colors.background
   };

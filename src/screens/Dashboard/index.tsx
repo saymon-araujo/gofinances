@@ -174,12 +174,12 @@ export function Dashboard() {
               <UserInfo>
                 <Photo
                   source={{
-                    uri: "https://images.unsplash.com/photo-1593642533144-3d62aa4783ec?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                    uri: "https://avatars.githubusercontent.com/u/49030804?v=4",
                   }}
                 />
                 <User>
                   <UserGreeting>Olá,</UserGreeting>
-                  <UserName>Saymon</UserName>
+                  <UserName>Rodrigo</UserName>
                 </User>
               </UserInfo>
 

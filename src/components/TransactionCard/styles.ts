@@ -9,6 +9,7 @@ interface TransactionProps {
 export const Container = styled.View`
   background-color: ${({ theme }) => theme.colors.shape};
   border-radius: 5px;
+
   padding: 17px 24px;
   margin-bottom: 16px;
 `;
@@ -22,7 +23,8 @@ export const Amount = styled.Text<TransactionProps>`
   font-family: ${({ theme }) => theme.fonts.regular};
   font-size: ${RFValue(20)}px;
   color: ${({ theme, type }) =>
-  type === 'positive' ? theme.colors.success : theme.colors.attencion};
+  type === 'positive' ? theme.colors.success : theme.colors.attention};
+
   margin-top: 2px;
 `;
 
@@ -30,6 +32,7 @@ export const Footer = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
   margin-top: 19px;
 `;
 
@@ -46,6 +49,7 @@ export const Icon = styled(Feather)`
 export const CategoryName = styled.Text`
   font-size: ${RFValue(14)}px;
   color: ${({ theme }) => theme.colors.text};
+
   margin-left: 17px;
 `;
 
