@@ -23,6 +23,7 @@ import {
   Fields,
   TransactionsTypes,
 } from "./styles";
+import { useAuth } from "../../hooks/auth";
 
 interface FormData {
   name: string;
@@ -74,6 +75,8 @@ export function Register() {
     if (category.key === "category")
       return Alert.alert("Selecione a categoria");
 
+    const { user } = useAuth();
+
     const newTransaction = {
       id: String(uuid.v4()),
       name: form.name,
@@ -84,7 +87,7 @@ export function Register() {
     };
 
     try {
-      const dataKey = "@gofinances:transactions";
+      const dataKey = `@gofinances:transactions_user:${user.id}`;
 
       const data = await AsyncStorage.getItem(dataKey);
       const currentData = data ? JSON.parse(data) : [];
