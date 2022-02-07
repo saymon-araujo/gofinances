@@ -72,7 +72,7 @@ $ git clone https://github.com/saymon-araujo/gofinances
 # Navigate to the server
 $ cd gofinances
 
-# Install the server dependencies
+# Install the project dependencies
 $ yarn
 $ expo install
 
@@ -81,12 +81,14 @@ $ expo start
 
 # When the bundle runs, in your Expo Go App click on Scan QR Code and appoint the camera to the QR code.
 
+```
+
 <br>
 <br>
 
 # License
 
-This project is under MIT license . [See it](https://github.com/saymon-araujo/rentx/blob/master/LICENSE) for more information.
+This project is under MIT license . [See it](https://github.com/saymon-araujo/gofinances/blob/main/LICENSE) for more information.
 
 ---
 
