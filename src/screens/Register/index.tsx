@@ -15,14 +15,7 @@ import { CategorySelectButton } from "../../components/Form/CategorySelectButton
 
 import { CategorySelect } from "../CategorySelect";
 
-import {
-  Container,
-  Header,
-  Title,
-  Form,
-  Fields,
-  TransactionsTypes,
-} from "./styles";
+import { Container, Header, Title, Form, Fields, TransactionsTypes } from "./styles";
 import { useAuth } from "../../hooks/auth";
 
 interface FormData {
@@ -47,6 +40,7 @@ export function Register() {
   });
 
   const navigation = useNavigation();
+  const { user } = useAuth();
 
   const {
     control,
@@ -72,10 +66,7 @@ export function Register() {
   async function handleRegister(form: FormData) {
     if (!transactionType) return Alert.alert("Selecione o tipo da transação");
 
-    if (category.key === "category")
-      return Alert.alert("Selecione a categoria");
-
-    const { user } = useAuth();
+    if (category.key === "category") return Alert.alert("Selecione a categoria");
 
     const newTransaction = {
       id: String(uuid.v4()),
@@ -151,10 +142,7 @@ export function Register() {
               />
             </TransactionsTypes>
 
-            <CategorySelectButton
-              title={category.name}
-              onPress={handleOpenSelectCategoryModal}
-            />
+            <CategorySelectButton title={category.name} onPress={handleOpenSelectCategoryModal} />
           </Fields>
 
           <Button title="Enviar" onPress={handleSubmit(handleRegister)} />

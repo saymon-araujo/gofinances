@@ -5,7 +5,7 @@ import { Profile } from "../../screens/Profile";
 
 describe("Testes na tela: Profile", () => {
   //Pode ser it ou test a função
-  it('Checks if the input "nome" rendered correctly', () => {
+  it('should have ---  if the input "nome" rendered correctly', () => {
     const { getByPlaceholderText } = render(<Profile />);
 
     const inputName = getByPlaceholderText("Nome");

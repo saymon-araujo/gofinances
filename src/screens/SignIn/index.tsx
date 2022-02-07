@@ -69,21 +69,14 @@ export function SignIn() {
             onPress={handleSignInWithGoogle}
           />
 
-          {Platform.OS === "ios" && (
-            <SignInSocialButton
-              title={"Entrar com Apple"}
-              svg={AppleSVG}
-              onPress={handleSignInWithApple}
-            />
-          )}
+          <SignInSocialButton
+            title={"Entrar com Apple"}
+            svg={AppleSVG}
+            onPress={handleSignInWithApple}
+          />
         </FooterWrapper>
 
-        {isLoading && (
-          <ActivityIndicator
-            color={theme.colors.shape}
-            style={{ marginTop: 18 }}
-          />
-        )}
+        {isLoading && <ActivityIndicator color={theme.colors.shape} style={{ marginTop: 18 }} />}
       </Footer>
     </Container>
   );
